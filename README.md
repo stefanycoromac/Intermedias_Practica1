@@ -62,10 +62,13 @@ Ejecutar dentro de la carpeta del proyecto creado:
 - Importacion del servicio **UserService**
 - Crear variable **userService** en el constructor de la clase
 - Importacion del modelo **User**
-- 
+- ...
+- Crisis por bugs
+- Devuelta a la vida
+- Fin del desarrollo de la app c:
 
 
-## USAC
+## USAC 2021
 
 
 

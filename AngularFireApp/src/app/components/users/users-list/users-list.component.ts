@@ -35,11 +35,11 @@ usersList!: User[];
       })
   }
   onEdit(user: User){
-    console.log(user);
+    this.userService.selectedUser = Object.assign({}, user);
   }
 
   onDelete(mykey: string){
-    console.log(mykey);
+    this.userService.deleteUser(mykey);
   }
 
 }
