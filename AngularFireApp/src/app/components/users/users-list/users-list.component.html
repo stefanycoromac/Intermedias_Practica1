@@ -1,19 +1,32 @@
-<p>users-list works!</p>
+
 <div class="card">
     <div class="card-body">
         <h6 class="text-center">List of Products</h6>
     </div>
     <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+              <th scope="col mb-5"> User </th>
+              <th scope="col mb-5">Email </th>
+              <th scope="col mb-5">Password</th>
+              <th scope="col mb-5">Name </th>
+              <th scope="col mb-5"></th>
+              
+            </tr>
+          </thead>
         <tbody>
             <tr *ngFor="let user of usersList">
-                <td>{{user.key}} </td>
+                <td> <i class="fas fa-user"></i>   </td>
                 <td>{{user.email}} </td>    
                 <td>{{user.password}} </td>
                 <td>{{user.name}} </td>
                 <td>
-                    <a class="btn btn-info text-white" (click)="onEdit(user)">
+                    <a class="btn btn-info text-white " (click)="onEdit(user)">
                         <i class="fas fa-edit"></i>
                     </a>
+                    <div>
+                        -------
+                    </div>
                     <a class="btn btn-danger text-white" (click)="onDelete(user.key)">
                         <i class="fas fa-trash-alt"></i>
                     </a>

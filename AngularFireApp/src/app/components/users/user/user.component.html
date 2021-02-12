@@ -2,7 +2,7 @@
     <div class="card-body">
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
             <input type="hidden" name="key" #key="ngModel" [(ngModel)]="userService.selectedUser.key">
-            <div class="form-group">
+            <div class="mb-3">
                 <input 
                     type="text"
                     class="form-control"
@@ -11,7 +11,7 @@
                     [(ngModel)]="userService.selectedUser.email"
                     placeholder="User Email">
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <input 
                     type="text"
                     class="form-control"
@@ -20,7 +20,7 @@
                     [(ngModel)]="userService.selectedUser.password"
                     placeholder="User Password">
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <input 
                     type="text"
                     class="form-control"
@@ -29,11 +29,13 @@
                     [(ngModel)]="userService.selectedUser.name"
                     placeholder="User Name">
             </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">
+            <div class="text-center">
+                <button class="mb-3 btn btn-info" type="submit">
+                    <i class="fas fa-user-plus"></i>
                     Add User
                 </button>
-                <button class="btn btn-secondary" type="reset" (click)="resetForm(userForm)">
+                <button class="mb-3 btn btn-primary" type="reset" (click)="resetForm(userForm)" id="btnReset" >
+                    <i class="fas fa-redo-alt"></i>
                     Reset Fields
                 </button>
             </div>
