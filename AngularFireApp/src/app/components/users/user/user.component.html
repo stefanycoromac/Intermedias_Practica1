@@ -1,5 +1,9 @@
-<div class="card">
+<div class="card border-light mb-3">
+    <div class="card-header">
+        <h4> User Form  </h4> 
+    </div>
     <div class="card-body">
+        
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
             <input type="hidden" name="key" #key="ngModel" [(ngModel)]="userService.selectedUser.key">
             <div class="mb-3">
@@ -29,15 +33,20 @@
                     [(ngModel)]="userService.selectedUser.name"
                     placeholder="User Name">
             </div>
-            <div class="text-center">
-                <button class="mb-3 btn btn-info" type="submit">
+            <div class="text-center" >
+                <div class="btn-group mr-2">
+                    <button class="mb-3 btn btn-info " type="submit"  >
                     <i class="fas fa-user-plus"></i>
                     Add User
-                </button>
-                <button class="mb-3 btn btn-primary" type="reset" (click)="resetForm(userForm)" id="btnReset" >
+                    </button>
+                </div>   
+                <div class="btn-group mr-2">
+                     <button class="mb-3  btn btn-primary" type="reset" (click)="resetForm(userForm)" id="btnReset"  >
                     <i class="fas fa-redo-alt"></i>
                     Reset Fields
-                </button>
+                    </button>
+                </div>            
+               
             </div>
         </form>
     </div>

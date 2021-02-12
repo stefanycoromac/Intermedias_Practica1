@@ -1,8 +1,10 @@
 
-<div class="card">
-    <div class="card-body">
-        <h6 class="text-center">List of Products</h6>
+<div class="card border-light mb-3"  >
+    <div class="card-header"> 
+     <h4 class="text-center">List of Users</h4>
     </div>
+    <div class="card-body">       
+  
     <table class="table table-sm table-hover">
         <thead>
             <tr>
@@ -20,18 +22,20 @@
                 <td>{{user.email}} </td>    
                 <td>{{user.password}} </td>
                 <td>{{user.name}} </td>
-                <td>
+                <td class="row" >     
+                    <div class="btn-group mr-2">       
                     <a class="btn btn-info text-white " (click)="onEdit(user)">
-                        <i class="fas fa-edit"></i>
-                    </a>
-                    <div>
-                        -------
-                    </div>
-                    <a class="btn btn-danger text-white" (click)="onDelete(user.key)">
-                        <i class="fas fa-trash-alt"></i>
-                    </a>
+                        <i class="fas fa-edit"></i> Edit User  
+                    </a>                      
+                     </div>  
+                     <div class="btn-group mr-2">
+                    <a class=" btn btn-danger text-white" (click)="onDelete(user.key)">
+                        <i class="fas fa-trash-alt"></i>  Delete User 
+                    </a>  
+                  </div>                     
                 </td>            
             </tr>
         </tbody>
     </table>
+  </div>
 </div>
