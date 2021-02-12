@@ -5,8 +5,19 @@
     </div>
     <table class="table table-sm table-hover">
         <tbody>
-            <tr>
-                
+            <tr *ngFor="let user of usersList">
+                <td>{{user.key}} </td>
+                <td>{{user.email}} </td>    
+                <td>{{user.password}} </td>
+                <td>{{user.name}} </td>
+                <td>
+                    <a class="btn btn-danger text-white" (click)="onEdit(user)">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                    <a class="btn btn-danger text-white" (click)="onDelete(user.key)">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </td>            
             </tr>
         </tbody>
     </table>

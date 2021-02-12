@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList} from 'angularfire2/database';
 
 import { User } from '../models/user';
-import { Usr } from '../models/usr';
 import { ProductService } from './product.service';
 
 @Injectable({
@@ -22,9 +21,8 @@ export class UserService {
   }
 
   insertUser(user: User){
-    console.log("Insert")
-    console.log(user)
     this.userList.push({
+      //autokey: "quemado",
       email: user.email,
       password: user.password,
       name: user.name
@@ -32,13 +30,14 @@ export class UserService {
   }
 
   updateUser(user: User){
-    this.userList.update(user.email, {
+    this.userList.update(user.key, {
+      email: user.email,
       password: user.password,
       name: user.name
     });
   }
 
-  deleteUser($email: string){
-    this.userList.remove($email);
+  deleteUser(key: string){
+    this.userList.remove(key);
   }
 }
