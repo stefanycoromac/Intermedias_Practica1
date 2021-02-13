@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList} from 'angularfire2/database';
 
 import { User } from '../models/user';
-import { ProductService } from './product.service';
 
 @Injectable({
   providedIn: 'root'
